@@ -34,8 +34,8 @@ function SkillList({ items, title, accent }: { items: Skill[]; title: string; ac
     const el = ref.current;
     if (!el) return;
     const io = new IntersectionObserver(
-      ([e]) => {
-        if (e.isIntersecting) {
+      (entries) => {
+        if (entries.some((e) => e.isIntersecting)) {
           setOn(true);
           io.disconnect();
         }
