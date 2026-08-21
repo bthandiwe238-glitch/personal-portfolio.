@@ -191,9 +191,10 @@
 @utility blob {
   position: absolute;
   border-radius: 999px;
-  filter: blur(80px);
+  filter: blur(70px) saturate(150%);
   pointer-events: none;
-  opacity: 0.55;
+  opacity: 0.75;
+  mix-blend-mode: screen;
 }
 
 @utility reveal {
